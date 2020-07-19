@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>joyEV</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet">
+        <link
+            href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+            rel='stylesheet'>
+        <link href="source/css/style.css" rel="stylesheet">
+        <!-- javaScript -->
+        <script src="source/js/jquery-3.4.1.min.js"></script>
+        <script src="source/js/common.js"></script>
+    </head>
+
+    <body class="site">
+        <!-- S:header -->
+        <header id="header">
+            <div class="container">
+                <button class="toggle-menu">
+                    메뉴열기
+
+                    <i class='bx bx-menu'></i>
+                </button>
+                <h1>joyEV</h1>
+            </div>
+        </header>
+        <!-- E:header -->
+
+        <!-- S:asideMenu -->
+        <aside>
+            <div class="outline">
+                <h2>JoyEV</h2>
+                <div class="profile">
+                    <p class="photo">
+                        <img src="source/images/temp.png" alt="user-photo">
+                    </p>
+                    <span>조동국님</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="on" href="">마이페이지</a>
+                        </li>
+                        <li>
+                            <a href="">상품구매</a>
+                        </li>
+                        <li>
+                            <a href="">고객센터</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <button class="close">메뉴닫기<i class='bx bx-x'></i>
+            </button>
+
+        </aside>
+        <!-- E:asideMenu -->
+
+        <!-- S:mainContent -->
+        <div id="content">
+
+            <section class="board-write">
+                <h2 class="navigation">
+                    <a href="">뒤로<i class='bx bx-chevron-left'></i>
+                    </a>
+                    공지사항
+                </h2>
+
+                <div class="board-head">
+                    <label for="title">제목</label>
+                    <input id="title" type="text">
+                </div>
+                <div class="text">
+                    <label for="text">본문</label>
+                    <textarea id="text"></textarea>
+                </div>
+
+                <ul class="file">
+                    <li>
+                        <label for="file01">첨부파일 1</label>
+                        <input type="file" id="file01" name="file01" title="첨부파일 1 선택">
+                    </li>
+                    <li>
+                        <label for="file02">첨부파일 2</label>
+                        <input type="file" id="file02" name="file02" title="첨부파일 2 선택">
+                    </li>
+                </ul>
+
+                <ul class="links">
+                    <li>
+                        <label for="link01">링크 1</label>
+                        <input type="text" id="link01" name="link01" title="링크 1 선택">
+                    </li>
+                    <li>
+                        <label for="link02">링크 2</label>
+                        <input type="text" id="link02" name="link02" title="링크 2 선택">
+                    </li>
+                </ul>
+
+
+        </section>
+        <article class="board-btn">
+            <a class="sub" title="목록" href="">목록</a>
+            <a class="main" title="작성완료" href="">작성완료</a>
+
+        </article>
+    </div>
+    <!-- E:mainContent -->
+    <!-- S:footer -->
+    <footer id="footer">
+        <a href="">이용약관</a>
+        <a href="">개인정보이용동의</a>
+        <p class="text">
+
+            <p class="text">(주)제주전기자동차서비스 (대표이사: 이규제)</p>
+            <p class="text">제주특별자치도 제주시 영평동 2170-1 스마트빌딩 102호</p>
+            <p class="text">개인정보보호관리자: 현수영 사업자등록번호: 616-81-98818</p>
+
+            <p class="copyright">ⓒ 제주전기자동차서비스</p>
+
+        </footer>
+        <!-- E:footer -->
+    </body>
+
+</html>
