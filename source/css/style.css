@@ -536,13 +536,11 @@ body .container {
   padding: 0 20px;
 }
 
-@media only screen and (min-width: 900px) {
+@media all and (min-width: 800px) {
   body .container {
-    position: relative;
-    display: inline-block;
+    width: 800px;
     margin: 0 auto;
-    width: 900px;
-    height: 100%;
+    background: #fff;
   }
 }
 
@@ -718,6 +716,22 @@ body.site aside.on div.outline div.profile span {
   color: #000;
 }
 
+body.site aside.on div.outline div.profile a.login {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 52px;
+  color: #000;
+}
+
+body.site aside.on div.outline div.profile a.login i {
+  font-size: 22px;
+  position: relative;
+  top: 3px;
+  margin-right: 6px;
+}
+
 body.site aside.on div.outline nav {
   margin: 70px 0 0;
 }
@@ -748,6 +762,14 @@ body.site div#content {
   text-align: left;
 }
 
+@media all and (min-width: 800px) {
+  body.site div#content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 body.site div#content h2.navigation {
   position: relative;
   margin: 0;
@@ -774,14 +796,21 @@ body.site div#content h2.navigation a i {
 }
 
 body.site div#content section.list ul {
-  border-top: 5px solid #eee;
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0;
 }
 
 body.site div#content section.list ul li {
   border-bottom: 5px solid #eee;
+}
+
+@media all and (min-width: 600px) {
+  body.site div#content section.list ul li {
+    display: inline-block;
+    width: 50%;
+  }
 }
 
 body.site div#content section.list ul li a {
@@ -947,6 +976,7 @@ body.site div#content section.order-list ul {
   list-style: none;
   margin: 0;
   padding: 20px;
+  font-size: 0;
 }
 
 body.site div#content section.order-list ul li {
@@ -954,6 +984,17 @@ body.site div#content section.order-list ul li {
   padding: 20px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+@media all and (min-width: 600px) {
+  body.site div#content section.order-list ul li {
+    display: inline-block;
+    width: calc(50% - 5px);
+  }
+  body.site div#content section.order-list ul li:nth-child(odd) {
+    margin-right: 10px;
+  }
 }
 
 body.site div#content section.order-list ul li h3 {
@@ -1165,6 +1206,13 @@ body.site footer#footer {
   font-size: 0;
   padding: 20px;
   background: #E1E1E1;
+  max-width: 800px;
+}
+
+@media all and (min-width: 800px) {
+  body.site footer#footer {
+    margin: 0 auto;
+  }
 }
 
 body.site footer#footer > a {
