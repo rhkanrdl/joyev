@@ -139,7 +139,7 @@ body {
 
     text-align:center;
     width:100vw;
-    overflow:hidden;
+    
 
 
 
@@ -218,6 +218,7 @@ body {
 
   
             @media all and (min-width: 800px) {
+                position:static;
                 padding-left:calc((100% - 800px) / 2);
                 padding-right:calc((100% - 800px) / 2);
                 height:80px;
@@ -539,6 +540,17 @@ body {
             margin-top:62px;
             text-align:left;
 
+
+  
+            @media all and (min-width: 800px) {
+                margin-top:0;
+            }
+
+
+            @media all and (min-width: 1200px) {
+            }
+
+
             h2.navigation {
                 position:relative;
                 margin:0;
@@ -546,6 +558,17 @@ body {
                 background:#3F3F3F;
                 color:#fff;
                 text-align:center;
+
+
+  
+                @media all and (min-width: 800px) {
+                    background:none;
+                    color:#333;
+                    line-height:auto;
+                    padding:20px 0 10px;
+                    font-size:36px;
+                }
+
 
                 a {
                     position:absolute;
@@ -555,6 +578,11 @@ body {
                     overflow:hidden;
                     color:#fff;
                     font-size:0;
+
+  
+                    @media all and (min-width: 800px) {
+                        display:none;
+                    }
 
                     i {
                         font-size:36px;
@@ -569,6 +597,8 @@ body {
 
 
             section.list {
+                background:#efefef;
+                
                 ul {
                     display:inline-block;
                     width:100%;
@@ -576,7 +606,6 @@ body {
                     margin:0;
                     padding:0;
                     font-size:0;
-                    background:#efefef;
 
   
                     @media all and (min-width: 800px) {
@@ -669,12 +698,57 @@ body {
 
             section.view {
 
+
+  
+                @media all and (min-width: 800px) {
+
+                    padding-left:calc((100% - 800px) / 2);
+                    padding-right:calc((100% - 800px) / 2);
+                }
+
+
+                @media all and (min-width: 1200px) {
+
+                    padding-left:calc((100% - 1200px) / 2);
+                    padding-right:calc((100% - 1200px) / 2);
+                }
+
+
                 div.view-header {
+                    position:relative;
                     padding:0 0 20px;
                     border-bottom:10px solid #eee;
+  
+                    @media all and (min-width: 800px) {
+                        min-height:270px;
+                    }
+        
+        
+                    @media all and (min-width: 1200px) {
+                        min-height:390px;
+
+                    }
 
                     p.image {
                         margin:0 0 16px 0;
+  
+                        @media all and (min-width: 800px) {
+                            width:350px;
+                            margin:0;
+                            position:absolute;
+                            left:0;
+                            top:30px;
+                        }
+            
+            
+                        @media all and (min-width: 1200px) {
+                            width:550px;
+                            top:40px;
+                        }
+
+
+            
+
                         img {
                             width:100%;
                         }
@@ -687,11 +761,35 @@ body {
                         padding:0 20px;
                         word-break:keep-all;
                         font-weight:600;
+  
+                        @media all and (min-width: 800px) {
+                            padding:20px 20px 20px 380px;
+                            font-size:28px;
+                            border-top:5px solid #efefef;
+                        }
+            
+            
+                        @media all and (min-width: 1200px) {
+                            padding:30px 20px 30px 600px;
+                            font-size:32px;
+                        }
+
                     }
 
                     div.option {
                         padding:0 20px 10px;
                         font-size:0;
+  
+                        @media all and (min-width: 800px) {
+                            padding:0 20px 10px 380px;
+                        }
+            
+            
+                        @media all and (min-width: 1200px) {
+                            padding:0 130px 10px 600px;
+
+                        }
+
 
                         input[type="datetime-local"] {
                             height:34px;
@@ -734,6 +832,7 @@ body {
                                 vertical-align:top;
                                 width:60px;
                                 line-height:32px;
+                                height:34px;
                                 border:1px solid #ccc;
                                 border-left:none;
                                 border-right:none;
@@ -759,6 +858,18 @@ body {
                         color:#fff;
                         background:$color-main;
                         border:none;
+  
+                        @media all and (min-width: 800px) {
+                            margin:20px 20px 10px 380px;
+                            width:400px;
+                            background:#333;
+                        }
+            
+            
+                        @media all and (min-width: 1200px) {
+                            width:470px;
+                            margin:30px 20px 10px 600px;
+                        }
                     }
                 }
 
@@ -781,6 +892,22 @@ body {
 
             section.order-list {
                 background:#EEEEEE;
+
+  
+                    @media all and (min-width: 800px) {
+
+                        padding-left:calc((100% - 800px) / 2);
+                        padding-right:calc((100% - 800px) / 2);
+                    }
+
+  
+                    @media all and (min-width: 1200px) {
+
+                        padding-left:calc((100% - 1200px) / 2);
+                        padding-right:calc((100% - 1200px) / 2);
+                    }
+
+
                 ul {
 
                     border-top:5px solid #eee;
@@ -790,6 +917,7 @@ body {
                     font-size:0;
 
                     li {
+                        position:relative;
                         background:#fff;
                         padding:20px;
                         margin-bottom:20px;
@@ -826,6 +954,17 @@ body {
                             overflow:hidden;
                             margin:0;
 
+  
+                            @media all and (min-width: 800px) {
+        
+                                height:130px;
+                            }
+        
+          
+                            @media all and (min-width: 1200px) {
+                                height:220px;
+                            }
+
                             img {
                                 display:none;
                             }
@@ -855,6 +994,16 @@ body {
                         span.date {
                             display:block;
                             text-align:center;
+                        }
+
+                        button.delete {
+                            position:absolute;
+                            right:0px;
+                            top:0px;
+                            background:#999;
+                            border:none;
+                            color:#fff;
+                            padding:4px 10px;
                         }
                     }
                 }
