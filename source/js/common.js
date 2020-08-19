@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 
 
-
     $(".toggle-menu").on("click", function(){
         
         $("aside").css("height", $(document).height());
@@ -45,6 +44,12 @@ $(document).ready(function() {
         $input.val(parseInt($input.val()) + 1);
         $input.change();
         return false;
+    });
+
+    $(window).on("resize", function(){
+        if ($(window).width() > 800) {
+            $("aside").removeClass("on");
+        }
     });
 
 

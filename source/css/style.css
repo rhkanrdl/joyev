@@ -522,6 +522,8 @@ body {
 /* style */
 body {
   text-align: center;
+  width: 100vw;
+  overflow: hidden;
 }
 
 body .container {
@@ -534,14 +536,6 @@ body .container {
   vertical-align: top;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-@media all and (min-width: 800px) {
-  body .container {
-    width: 800px;
-    margin: 0 auto;
-    background: #fff;
-  }
 }
 
 body.login {
@@ -603,6 +597,24 @@ body.site header {
   line-height: 60px;
 }
 
+@media all and (min-width: 800px) {
+  body.site header {
+    padding-left: calc((100% - 800px) / 2);
+    padding-right: calc((100% - 800px) / 2);
+    height: 80px;
+    line-height: 80px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body.site header {
+    padding-left: calc((100% - 1200px) / 2);
+    padding-right: calc((100% - 1200px) / 2);
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
 body.site header button.toggle-menu {
   margin: 0;
   padding: 0;
@@ -617,6 +629,12 @@ body.site header button.toggle-menu {
   outline: none;
 }
 
+@media all and (min-width: 800px) {
+  body.site header button.toggle-menu {
+    display: none;
+  }
+}
+
 body.site header button.toggle-menu i {
   font-size: 36px;
   color: #000;
@@ -628,6 +646,20 @@ body.site header h1 {
   height: 32.45px;
   font-size: 0;
   background: url("../images/logo.svg") no-repeat center/100% auto;
+}
+
+@media all and (min-width: 800px) {
+  body.site header h1 {
+    margin: 20px 0;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body.site header h1 {
+    margin: 24px 0;
+    width: 120px;
+    height: 53px;
+  }
 }
 
 body.site aside {
@@ -644,12 +676,93 @@ body.site aside {
   transition: all 0.6s ease;
 }
 
+@media all and (min-width: 800px) {
+  body.site aside {
+    display: block;
+    left: 50%;
+    right: auto;
+    top: 22px;
+    bottom: auto;
+    overflow: visible;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body.site aside {
+    top: 28px;
+  }
+}
+
 body.site aside div.outline {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
   width: 0;
+}
+
+@media all and (min-width: 800px) {
+  body.site aside div.outline {
+    position: static;
+    width: auto;
+  }
+  body.site aside div.outline h2 {
+    display: none;
+  }
+  body.site aside div.outline nav {
+    position: absolute;
+    left: -250px;
+    width: 400px;
+  }
+  body.site aside div.outline nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  body.site aside div.outline nav ul li {
+    display: inline-block;
+  }
+  body.site aside div.outline nav ul li a {
+    display: block;
+    font-size: 18px;
+    margin: 0 20px;
+    font-weight: 600;
+  }
+  body.site aside div.outline div.profile {
+    position: absolute;
+    width: 160px;
+    margin-left: 226px;
+    text-align: right;
+    font-size: 16px;
+  }
+  body.site aside div.outline div.profile p.photo {
+    margin: -4px 0 0;
+  }
+  body.site aside div.outline div.profile span {
+    font-weight: 600;
+    position: absolute;
+    right: 70px;
+    top: 0;
+  }
+  body.site aside div.outline div.profile a.logout {
+    position: absolute;
+    right: 70px;
+    top: 22px;
+    font-size: 14px;
+    color: #0096DF;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body.site aside div.outline nav {
+    left: -350px;
+  }
+  body.site aside div.outline nav ul li a {
+    font-size: 20px;
+  }
+  body.site aside div.outline div.profile {
+    margin-left: 420px;
+  }
 }
 
 body.site aside button.close {
@@ -662,6 +775,12 @@ body.site aside button.close {
   border: none;
   background: none;
   color: #000;
+}
+
+@media all and (min-width: 800px) {
+  body.site aside button.close {
+    display: none;
+  }
 }
 
 body.site aside button.close i {
@@ -716,6 +835,16 @@ body.site aside.on div.outline div.profile span {
   color: #000;
 }
 
+body.site aside.on div.outline div.profile a.logout {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 52px;
+  color: #000;
+  padding: 2px 5px;
+  color: #0096DF;
+}
+
 body.site aside.on div.outline div.profile a.login {
   display: inline-block;
   vertical-align: top;
@@ -762,14 +891,6 @@ body.site div#content {
   text-align: left;
 }
 
-@media all and (min-width: 800px) {
-  body.site div#content {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 body.site div#content h2.navigation {
   position: relative;
   margin: 0;
@@ -796,20 +917,43 @@ body.site div#content h2.navigation a i {
 }
 
 body.site div#content section.list ul {
+  display: inline-block;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
   font-size: 0;
+  background: #efefef;
+}
+
+@media all and (min-width: 800px) {
+  body.site div#content section.list ul {
+    padding-left: calc((100% - 800px) / 2);
+    padding-right: calc((100% - 800px) / 2);
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body.site div#content section.list ul {
+    padding-left: calc((100% - 1200px) / 2);
+    padding-right: calc((100% - 1200px) / 2);
+  }
 }
 
 body.site div#content section.list ul li {
-  border-bottom: 5px solid #eee;
+  width: calc(100% - 40px);
+  background: #fff;
+  margin: 20px;
+  vertical-align: top;
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: 800px) {
   body.site div#content section.list ul li {
     display: inline-block;
-    width: 50%;
+    width: calc(50% - 20px);
+    margin: 50px 10px;
+    -webkit-box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 10px 2px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -822,7 +966,19 @@ body.site div#content section.list ul li a {
 body.site div#content section.list ul li a p.image {
   width: 100%;
   margin: 0;
-  height: 130px;
+  height: 180px;
+}
+
+@media all and (min-width: 600px) {
+  body.site div#content section.list ul li a p.image {
+    height: 200px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body.site div#content section.list ul li a p.image {
+    height: 240px;
+  }
 }
 
 body.site div#content section.list ul li a p.image img {
@@ -1206,12 +1362,20 @@ body.site footer#footer {
   font-size: 0;
   padding: 20px;
   background: #E1E1E1;
-  max-width: 800px;
 }
 
 @media all and (min-width: 800px) {
   body.site footer#footer {
-    margin: 0 auto;
+    padding-left: calc((100% - 800px) / 2);
+    padding-right: calc((100% - 800px) / 2);
+  }
+}
+
+@media all and (min-width: 1200px) {
+  body.site footer#footer {
+    padding-left: calc((100% - 1200px) / 2);
+    padding-right: calc((100% - 1200px) / 2);
+    text-align: left;
   }
 }
 
@@ -1228,11 +1392,30 @@ body.site footer#footer > a:first-child {
   margin-right: 10px;
 }
 
+@media all and (min-width: 1200px) {
+  body.site footer#footer > a {
+    text-align: center;
+    width: auto;
+    border: none;
+    font-weight: 800;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+
 body.site footer#footer p.text,
 body.site footer#footer p.copyright {
   font-size: 12px;
   margin: 0 0 2px;
   word-break: keep-all;
+}
+
+@media all and (min-width: 1200px) {
+  body.site footer#footer p.text,
+  body.site footer#footer p.copyright {
+    font-size: 14px;
+    margin: 0;
+  }
 }
 
 body.site footer#footer p.copyright {
