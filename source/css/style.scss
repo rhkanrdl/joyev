@@ -827,7 +827,7 @@ body {
                         
 
                         &.count {
-                            input[type="text"] {
+                            &>input[type="text"] {
                                 width:calc(100% - 134px);
                                 margin-right:6px;
                             }

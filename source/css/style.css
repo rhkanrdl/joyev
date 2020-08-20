@@ -1171,7 +1171,7 @@ body.site div#content section.view div.view-header div.option > input[type="text
   content: "" !important;
 }
 
-body.site div#content section.view div.view-header div.option.count input[type="text"] {
+body.site div#content section.view div.view-header div.option.count > input[type="text"] {
   width: calc(100% - 134px);
   margin-right: 6px;
 }
